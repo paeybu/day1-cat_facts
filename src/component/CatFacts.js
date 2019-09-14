@@ -8,7 +8,9 @@ const CatFact = () => {
 
   const getFacts = async () => {
     setLoading(true)
-    const res = await axios.get('https://cat-fact.herokuapp.com/facts')
+    const res = await axios.get(
+      'https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com/facts'
+    )
 
     setFacts(res.data.all)
     setLoading(false)
